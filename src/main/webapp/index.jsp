@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EMS | Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 { color: white; margin-bottom: 30px; font-weight: 300; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+
+    .login-container {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        width: 350px;
+        text-align: center;
+    }
+
+    h2 { margin-bottom: 25px; color: #333; font-weight: 600; }
+
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus { border-color: #764ba2; box-shadow: 0 0 5px rgba(118, 75, 162, 0.3); }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #764ba2;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover { background: #5a3782; transform: translateY(-2px); }
+</style>
+</head>
+<body>
+
+<h1>Employee Management System</h1>
+
+<c:if test="${not empty error}">
+    <script>alert("${error}");</script>
+</c:if>
+
+<div class="login-container">
+    <form action="dashboard" method="post">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" name="Username" required>
+        <input type="password" placeholder="Password" name="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
