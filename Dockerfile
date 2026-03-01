@@ -8,4 +8,5 @@ RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java","-jar","target/Spring_MVC_emsProject-0.0.1-SNAPSHOT.jar"]
+# CHANGED: target file is now .war, but still runs with java -jar
+CMD ["java", "-jar", "target/Spring_MVC_emsProject-0.0.1-SNAPSHOT.war"]
