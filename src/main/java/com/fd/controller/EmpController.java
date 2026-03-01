@@ -20,6 +20,11 @@ public class EmpController {
     public EmpController(EmpService service) {
         this.service = service;
     }
+    
+    @GetMapping("/")
+    public String home() {
+        return "index"; // index.jsp
+    }
 
     // ================= LOGIN =================
     @PostMapping("/dashboard")
