@@ -17,7 +17,7 @@
     <groupId>com.fd</groupId>
     <artifactId>Spring_MVC_emsProject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>  <!-- CHANGED from jar to war -->
+    <packaging>war</packaging>
 
     <name>Spring_MVC_emsProject</name>
     <description>EMS Project</description>
@@ -34,7 +34,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- ADDED: Mark embedded Tomcat as provided so WAR is still executable -->
+        <!-- Embedded Tomcat as provided so WAR is still executable -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -50,7 +50,6 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>  <!-- CHANGED: must be provided -->
         </dependency>
 
         <!-- ================= JSTL ================= -->
