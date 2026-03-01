@@ -17,7 +17,7 @@
     <groupId>com.fd</groupId>
     <artifactId>Spring_MVC_emsProject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>Spring_MVC_emsProject</name>
     <description>EMS Project</description>
@@ -37,13 +37,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <!-- ✅ REQUIRED for WAR + JSP -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <!-- JSP Engine -->
