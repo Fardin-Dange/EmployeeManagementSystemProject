@@ -6,9 +6,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class SpringMvcEmsProjectApplication extends SpringBootServletInitializer {  // ADDED
+public class SpringMvcEmsProjectApplication extends SpringBootServletInitializer {
 
-    // ADDED: required for WAR deployment with embedded Tomcat
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(SpringMvcEmsProjectApplication.class);
