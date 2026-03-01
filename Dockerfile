@@ -1,5 +1,4 @@
-# ---------- BUILD STAGE ----------
-FROM eclipse-temurin:17-jdk AS builder
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 COPY . .
@@ -7,15 +6,6 @@ COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
-
-# ---------- RUN STAGE ----------
-FROM eclipse-temurin:17-jre
-
-WORKDIR /app
-
-# copy only jar from builder
-COPY --from=builder /app/target/*.jar app.jar
-
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+CMD ["java","-jar","target/Spring_MVC_emsProject-0.0.1-SNAPSHOT.war"]
